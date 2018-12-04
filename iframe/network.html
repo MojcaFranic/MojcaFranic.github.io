@@ -57,8 +57,6 @@
         else return 1;
     }
 
-    d3.json("./graph-basic.json", function(error, graphj) {
-        if (error) throw error;
 
         var link = svg.append("g")
             .attr("class", "links")
@@ -265,7 +263,7 @@
             }
         }
 
-    });
+    
 
     function dragstarted(d) {
         if (!d3.event.active) simulation.alphaTarget(0.3).restart();
